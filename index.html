@@ -9,13 +9,13 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
- 
+
     <link rel="stylesheet" href="src/style.css" />
-         <title>Weather App</title>
+    <title>Weather App</title>
   </head>
   <body>
     <div class="weather-app">
-   <header>
+      <header>
         <form>
           <input
             type="search"
@@ -27,25 +27,35 @@
         </form>
       </header>
       <main>
-        <div>
-             <h1>Harare</h1>
-            <p>
-              Tuesday 20:50, moderate rain <br />
-              Humidity: 70%, Wind: 4.5km/h
+        <div class="current-weather">
+          <div>
+            <h1 class="current-city" id="current-city">Harare</h1>
+            <p class="current-details">
+              Sunday 19:44, moderate rain <br />
+              Humidity: <strong>87%</strong>, Wind: <strong>7.2km/h</strong>
             </p>
           </div>
-          <div>
-            ☀️24°C
+          <div class="current-temperature">
+            <div class="current-temperature-icon">☀️</div>
+            <div class="current-temperature-value">24</div>
+            <div class="current-temperature-unit">°C</div>
           </div>
         </div>
       </main>
 
-
-    <footer>
-      This project was coded by <a href="" target="_blank">Margaret C M</a>, is
-      <a href="" target="_blank">open-sourced on GitHub</a> and
-      <a href="" target="_blank">hosted on Netlify</a>
-    </footer>
+      <footer>
+        This project was coded by
+        <a href="https://github.com/Margaret-cm/" target="_blank"
+          >Margaret C M</a
+        >, is
+        <a href="https://github.com/Margaret-cm/my-weather-app" target="_blank"
+          >open-sourced on GitHub</a
+        >
+        and
+        <a href="https://mcm-weather-app.netlify.app/" target="_blank"
+          >hosted on Netlify</a
+        >
+      </footer>
     </div>
   </body>
 </html>
