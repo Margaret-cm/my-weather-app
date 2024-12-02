@@ -4,10 +4,12 @@ function updateTemperature(response) {
   let cityElement = document.querySelector("#current-city");
   let timeElement = document.querySelector("#time");
   let currentDate = new Date(response.data.time * 1000);
+  let iconElement = document.querySelector("#icon");
 
   cityElement.innerHTML = response.data.city;
   currentTemperatureValue.innerHTML = Math.round(temperature);
   timeElement.innerHTML = formatDate(currentDate);
+  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class=.current-details-icon"/>`;
 }
 
 function formatDate(currentDate) {
