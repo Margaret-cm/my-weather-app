@@ -5,11 +5,17 @@ function updateTemperature(response) {
   let timeElement = document.querySelector("#time");
   let currentDate = new Date(response.data.time * 1000);
   let iconElement = document.querySelector("#icon");
+  let descriptionElement = document.querySelector("#description");
+  let humidityElement = document.querySelector("#humidity");
+  let windElement = document.querySelector("#wind");
 
   cityElement.innerHTML = response.data.city;
   currentTemperatureValue.innerHTML = Math.round(temperature);
   timeElement.innerHTML = formatDate(currentDate);
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class=.current-details-icon"/>`;
+  descriptionElement.innerHTML = response.data.condition.description;
+  humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
+  windElement.innerHTML = `${response.data.wind.speed}km/h`;
 }
 
 function formatDate(currentDate) {
@@ -29,7 +35,7 @@ function formatDate(currentDate) {
   // if (minutes < 10) {
   // minutes = `0${minutes}`;
   //}
-  return `${day}, ${hour}:${minutes}`;
+  return `${day} ${hour}:${minutes}, `;
 }
 
 function handleSearch(event) {
