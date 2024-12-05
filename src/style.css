@@ -1,6 +1,6 @@
 body {
   background: #f9f7fe;
-  font-family: "Roboto", sans-serif;
+  font-family: "PT Mono", monospace;
 }
 
 main {
@@ -27,13 +27,13 @@ header {
   color: rgba(39, 33, 66, 0.4);
   font-size: 16px;
   padding: 20px;
-  width: 75%;
+  width: 70%;
   border-radius: 6px;
 }
 
 .search-button {
   margin-left: 25px;
-  width: 20%;
+  width: 23%;
   font-size: 16px;
   background-color: #885df1;
   color: white;
@@ -54,10 +54,11 @@ header {
 }
 
 .current-city {
-  font-size: 38px;
+  font-size: 50px;
   font-weight: 900;
   margin: 0;
 }
+
 .current-conditions {
   color: rgba(39, 33, 66, 0.4);
   font-size: 16px;
@@ -73,9 +74,9 @@ header {
   display: flex;
 }
 
-.current-details-icon {
-  font-size: 40px;
-  margin-top: 22px;
+#icon {
+  position: relative;
+  top: -10px;
 }
 
 .current-details-value {
@@ -86,6 +87,47 @@ header {
 .current-details-unit {
   font-size: 28px;
   margin-top: 16px;
+}
+
+.forecast {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 25px;
+}
+
+.forecast-daily {
+  background-color: #f9f7fe;
+  border: 1px solid rgba(39, 33, 66, 0.1);
+  border-radius: 6px;
+  width: 600px;
+  margin: 10px;
+  padding: 15px 0;
+}
+
+.forecast-day {
+  text-align: center;
+  color: rgba(39, 33, 66, 0.4);
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.forecast-icon {
+  display: block;
+  margin: 0 auto;
+  height: 60px;
+  width: 60px;
+}
+
+.forecast-temperatures {
+  display: flex;
+  justify-content: center;
+  color: #f65282;
+  text-align: center;
+}
+
+.forecast-max-temperature {
+  padding: 0 5px;
+  font-weight: bold;
 }
 
 footer {
